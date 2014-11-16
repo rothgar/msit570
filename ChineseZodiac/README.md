@@ -5,6 +5,8 @@ for chapters 1-7.
 
 ### Colors
 
+Using [Carved Chinese Box](http://www.colourlovers.com/palette/2038614/Carved_Chinese_Box)
+
 ![palette](https://github.com/rothgar/msit570/blob/master/ChineseZodiac/images/color-palatte.png)
 
 hex: FBE4AE
