@@ -5,7 +5,7 @@ for chapters 1-7.
 
 ### Colors
 
-![palette](https://github.com/rothgar/msit570/raw/master/ChineseZodiac/images/color-palette.png)
+![palette](https://github.com/rothgar/msit570/blob/master/ChineseZodiac/images/color-palatte.png)
 
 hex: FBE4AE
 RGB: 251,228,174
