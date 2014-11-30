@@ -12,8 +12,11 @@ fahrenheit to celcius <input type="radio" name="scale" value="f" <?php if(!isset
     <br>
     <br>
     <!-- Temperature we are going to convert -->
-    <input type="text" name="degrees" value="<?php print $sub_degrees ; ?>"> Degrees
+    <input type="text" name="degrees0" value="<?php print $degrees0 ; ?>"> Start Tempurature
     <br>
+    <input type="text" name="degrees1" value="<?php print $degrees1 ; ?>"> End Tempurature
+    <br>
+
     <br>
     <input type="submit" name="temp_submit" value="Convert">
 </form>
@@ -30,16 +33,37 @@ if (isset($_GET['temp_submit'])) {
     }
     echo "<br>";
     // get submitted degrees
-    $sub_degrees = $_GET['degrees'];
+    $degree0 = $_GET['degrees0'];
+    $degree1 = $_GET['degrees1'];
+
+    // Start table layout
+    echo "<table border=1>";
+
     if ( $scale == "f" ) {
-        // echo conversion for f -> c
-        echo round(($sub_degrees-32)*(5/9), 1);
+        // conversion for f -> c
+        for ($i = $degree0; $i <= $degree1; $i++) {
+            echo "<tr>";
+            // show starting tempurature
+            echo '<td style="width:80px;text-align:right">'. $i ."</td>";
+            // calculate converted tempurature
+            echo '<td style="width:80px;text-align:right">' . round(($i-32)*(5/9), 1) . "</td>";
+            echo "</tr>";
+        }
     } else {
         // conversion for c -> f
-        echo round(($sub_degrees*(9/5))+32, 1);
+        for ($i = $degree0; $i <= $degree1; $i++) {
+            echo "<tr>";
+            // show starting tempurature
+            echo '<td style="width:80px;text-align:right">'. $i ."</td>"; 
+            // calculate converted tempurature
+            echo '<td style="width:80px;text-align:right">' . round(($i*(9/5))+32, 1) . "</td>";
+            echo "</tr>";
+        }
     }
+
+    // End table
+    echo "</table>";
 }
 ?>
-</table>
 </body>
 </html>
