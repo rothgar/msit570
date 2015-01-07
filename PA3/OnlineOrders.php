@@ -6,6 +6,7 @@
 <?php
 // set item variables
 // item,avail,cost,desc
+// Using named arrays to avoid nested for loops
 $items = array
   (
     array(
@@ -58,13 +59,16 @@ $items = array
 <?php
 // print items
 for ($i = 0; $i < count($items); $i++) {
+  $tmp_qty=strtolower(preg_replace("/[\s]/", "-", $items[$i][name]))."_qty";
   echo "<tr>";
-  echo '<td> <input type=number min=0 step=1 name="'.strtolower(preg_replace("/[\s]/", "-", $items[$i][name])). '_qty" value="'. strtolower(preg_replace("/[\s]/", "-", $items[$i][name])).'_qty>" </td>';
+  echo '<td> <input type=number min=0 step=1 name="'.strtolower(preg_replace("/[\s]/", "-", $items[$i][name])). '_qty" value="'. $tmp_qty .'" </td>';
  // echo strtolower(preg_replace("/[\s]/", "-", $items[$i][name]));
   echo "<td>".$items[$i][name]."</td>";
   echo "<td>".$items[$i][avail]."</td>";
   echo "<td>".$items[$i][desc]."</td>";
   echo "<td>".$items[$i][cost]."</td>";
+  // subtotal
+  echo "<td>". $item[$i][cost]*$tmp_qty;
   echo "</tr>";
 }
 ?>
