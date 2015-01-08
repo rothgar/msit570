@@ -54,7 +54,7 @@ $items = array
   );
 ?>
 
-<form name=orders method="POST" action="#">
+<form name=orders method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 <table border=1> 
 <?php
 // print items
