@@ -13,9 +13,13 @@ td {
 <body>
 
 <?php
-// set item variables
-// item,avail,cost,desc
-// Using named arrays to avoid nested for loops
+/* Justin Garrison
+ * 2015-01-10
+ * Simple shopping cart example
+ *
+ * set item variables
+ * item,avail,cost,desc
+ * Using named arrays to avoid nested for loops*/
 $items = array
   (
     "1" => array(
@@ -65,6 +69,7 @@ $items = array
 // initialize variables
 $action = '';
 $total = 0;
+date_default_timezone_set('America/Los_Angeles');
 
 // get the action variable for future tests
 if (isset($_POST['action'])) {
@@ -80,12 +85,13 @@ if (isset($_POST)) {
     }
   }
   if ( $action == "update") {
-
+    // just reload the page on an update
   } elseif ($action == "order") {
       echo "<h1>Thank you for your order</h1>";
-      date_default_timezone_set('America/Los_Angeles');
+      // set date here so it happens at the same time as order submit
       $file = date(Y.m.d.His);
-      file_put_contents("OnlineOrders/".$file , serialize($items));
+      // make sure OnlineOrders folder is writable by apache user
+      file_put_contents("OnlineOrders/".$file.".txt" , serialize($items));
   }
 }
 ?>
@@ -102,6 +108,7 @@ foreach ($items as $id=>$item) {
   foreach ($item as $label=>$value) {
     switch ($label) {
       case "cost":
+        // format cost as money
         $value = money_format('$%i', $value);
         break;
       default:
@@ -122,8 +129,11 @@ foreach ($items as $id=>$item) {
 </table>
 
 <?php
-print_r($_POST);
-print($total);
+// uncomment for debugging
+//print_r($_POST);
+//print($total);
+
+//hide the buttons if we just ordered something
 if ($action != "order") {
 ?>
 
