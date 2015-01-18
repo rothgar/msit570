@@ -25,37 +25,37 @@
 if (isset($_GET['page'])) {
   switch ($_GET['page']) {
     case 'site_layout':
-      include('Includes/inc_site_layout.php');
+      include('includes/' . 'inc_site_layout.php');
       break;
     case 'control_structures':
-      include('Includes/' . 'inc_control_structures.php');
+      include('includes/' . 'inc_control_structures.php');
       break;
     case 'string_functions':
-      include('Includes/' . 'inc_string_functions.php');
+      include('includes/' . 'inc_string_functions.php');
       break;
     case 'web_forms':
-      include('Includes/inc_web_forms.php');
+      include('includes/' . 'inc_web_forms.php');
       break; 
     case 'midterm_assessment':
-      include('Includes/' . 'inc_midterm_assessment.php');
+      include('includes/' . 'inc_midterm_assessment.php');
       break;
     case 'state_information':
-      include('Includes/' . 'inc_state_information.php');
+      include('includes/' . 'inc_state_information.php');
       break;
     case 'user_templates':
-      include('Includes/' . 'inc_user_templates.php');
+      include('includes/' . 'inc_user_templates.php');
       break;
     case 'final_project':
-      include('Includes/' . 'inc_final_project.php');
+      include('includes/' . 'inc_final_project.php');
       break;
     case 'home_page': // A value of 'home_page' means to display the default page
     default:
-      include('Includes/inc_home.php');
+      include('includes/inc_home.php');
       break;
     }
 }
 else // If no button has been selected, then display the default page
-  include('Includes/inc_home.php');
+  include('includes/inc_home.php');
 </div>
 
 <div id="footer">
