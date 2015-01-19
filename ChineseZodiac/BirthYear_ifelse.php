@@ -3,15 +3,19 @@ date_default_timezone_set('America/Los_Angeles');
 $currentyear = date(Y);
 
 if (isset($_POST['birthyear'])) {
-  $sign = findsign($_POST['birthyear']);
+  $year = $_POST['birthyear'];
+  $sign = findsign($year);
+  $count = getstats($year);
+
   echo "You were born under the sign of the " . $sign;
   echo "<br/ >";
   echo "<img src='images/" . $sign .".png'>";
-
+  echo "<br/ >";
+  echo "You are visitor ".$count." to enter ".$year;
 } else {
 ?>
   <form method="POST" >
-  <p>What year were you born? <input type="number" name="birthyear" min="<?php echo $currentyear-100 ?>" max="<?php echo $currentyear ?>" required></p>
+  <p>What year were you born? <input type="number" name="birthyear" min="<?php echo $currentyear-100 ?>" max="<?php echo $currentyear ?>" required autofocus></p>
     <input type="submit" name="submit">
   </form>
 <?php } ?>
@@ -48,5 +52,21 @@ function findsign($zyear) {
     $sign = $signs[11];
   }
   return $sign;
+}
+function getstats($syear) {
+  $name = "statistics/$syear.txt";
+  if (file_exists($name)) {
+    $file = fopen($name, "r");
+    $counter = fgets($file);
+    fclose($file);
+  } else {
+    $file = fopen($name, "w");
+    $counter = 0;
+    fclose($file);
+  }
+  // add 1 to counter
+  $counter += 1;
+  file_put_contents($name, $counter);
+  return $counter;
 }
 ?>
