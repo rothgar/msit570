@@ -1,6 +1,3 @@
-<?php
-include 'home_links_bar.inc'
-?>
 
 <p>
 PHP is a web development language that allows development of advanced webpages

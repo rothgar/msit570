@@ -1,28 +1,45 @@
-<style>
+@import url("reset.css");
+
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+p {
+  padding: 10px;
+}
 #header {
+    float: left;
+    height: 100px;
+    width: 1000px;
     background-color:black;
     color:white;
     text-align:center;
     padding:5px;
 }
-#nav {
-    line-height:30px;
+#textnav {
+    float: left;
+    height: 40px;
+    width: 1000px;
+    text-align:center;
+    padding:5px;
+}
+#btnnav {
     background-color:#eeeeee;
-    height:300px;
-    width:100px;
+    width:150px;
     float:left;
     padding:5px; 
 }
 #section {
-    width:350px;
+    width:850px;
     float:left;
     padding:10px; 
 }
 #footer {
+    height: 40px;
+    width: 1000px;
     background-color:black;
     color:white;
     clear:both;
     text-align:center;
     padding:5px; 
 }
-</style>
