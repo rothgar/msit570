@@ -7,39 +7,37 @@ body {
 p {
   padding: 10px;
 }
+#wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
 #header {
     float: left;
-    height: 100px;
+    height: 250px;
     width: 1000px;
-    background-color:black;
-    color:white;
     text-align:center;
-    padding:5px;
 }
 #textnav {
     float: left;
     height: 40px;
     width: 1000px;
     text-align:center;
-    padding:5px;
-}
-#btnnav {
-    background-color:#eeeeee;
-    width:150px;
-    float:left;
-    padding:5px; 
 }
 #section {
-    width:850px;
+    background-color:#FFF0FF;
+    width: 780px;
     float:left;
-    padding:10px; 
+}
+#btnnav {
+    width: 220px;
+    float: left;
 }
 #footer {
     height: 40px;
     width: 1000px;
     background-color:black;
     color:white;
-    clear:both;
     text-align:center;
     padding:5px; 
+    clear:both;
 }
