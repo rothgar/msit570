@@ -38,8 +38,8 @@
         case 'web_forms':
           include('include/' . 'inc_web_forms.php');
           break; 
-        case 'midterm_assessment':
-          include('include/' . 'inc_midterm_assessment.php');
+        case 'midterm_assignment':
+          include('include/' . 'inc_midterm_assignment.php');
           break;
         case 'state_information':
           include('include/' . 'inc_state_information.php');
