@@ -4,18 +4,24 @@
 </form>
 
 <?php
-echo getname();
-if ($_FILES['filename']['error'] = 0) {
-  $directory = "/images";
-  $tmp_name = $_FILES["filename"]["tmp_name"];
-  $name = getname();
-  move_uploaded_file($_FILES["filename"]["tmp_name"], "$directory"."/"."$name");
+//DEBUGGING echo getname();
+$directory = "images";
+$tmp_name = $_FILES["filename"]["tmp_name"];
+$newname = getname();
+if (isset($_FILES['filename'])) {
+if ( move_uploaded_file($_FILES["filename"]["tmp_name"], $directory."/".$newname) === FALSE) {
+  echo "Could not upload file " . htmlentities($_FILES['filename']['name']) . "<br />\n";
 } else {
-  echo $_FILES['filename']['error'];
+  chmod( $directory . "/" . $newname, 0644);
+  echo "successfully uploaded file " . htmlentities($_FILES['filename']['name']) . " to ".$newname."<br />\n";
+  //DEBUGGING echo $_FILES['filename']['error'];
+}
 }
 
 function getname() {
-  $files = glob($directory.'Dragon*.png');
+  $directory = "images";
+  $files = glob($directory."/Dragon*.png");
+  // DEBUGGING print_r($files);
   natsort($files);
   preg_match('!Dragon(\d+)!', end($files), $matches);
   $newname = 'Dragon' . ($matches[1] + 1) . '.png';
