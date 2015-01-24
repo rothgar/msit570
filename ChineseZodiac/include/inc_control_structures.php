@@ -1,23 +1,9 @@
-<a href="#string">String Functions</a>
-<a href="#char">Character Functions</a>
+<h1>Conditional Statements and Looping Structures</h1>
+
 <a href="#if_else">If...Else Statement</a>
 <a href="#switch">Switch Statement</a>
 <a href="#while_loop">While Loop</a>
 <a href="#for_loop">For Loop</a>
-
-<h1>String and Character Functions</h3>
-
-<a id="string"><h3>String Functions</h3></a>
-  <p>Find similar strings in each Zodiac sign</p>
-  <a href="SimilarNames.php">[Test the Script]</a>
-  <a href="ShowSourceCode.php?source_file=SimilarNames.php">[View the Source Code]</a>
-  
-<a id="char"><h3>Character Functions</h3></a>
-  <p>Finds out what signs can be spelled with the letters from the phrase "Embed PHP scripts within an XHTML document."</p>
-  <a href="EmbeddedWords.php">[Test the Script]</a>
-  <a href="ShowSourceCode.php?source_file=EmbeddedWords.php">[View the Source Code]</a>
-
-<h1>Conditional Statements and Looping Structures</h1>
 
 <a id="if_else"><h3>If...Else Statement</h3></a>
   <p>Show how an if else statement can be used to conditionally run code.</p>
