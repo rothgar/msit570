@@ -1,3 +1,6 @@
+<a href="index.php?section=php">PHP</a>
+<a href="index.php?section=zodiac">Chinese Zodiac</a>
+
 <?php
 if (isset($_GET['section'])) {
   switch ($_GET['section']) {
