@@ -1,7 +1,5 @@
-<a href="index.php?section=php">PHP</a>
-<a href="index.php?section=zodiac">Chinese Zodiac</a>
-
 <?php
+include('include/inc_home_links_bar.php');
 if (isset($_GET['section'])) {
   switch ($_GET['section']) {
     case 'zodiac':
