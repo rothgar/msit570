@@ -19,5 +19,5 @@
 <a href = "index.php?page=state_information">
 <img class="btn" src="images/stateinformation.png" alt="[State Information]" title="State Information"style = "border:0" /></a><br />
 
-<a href = "index.php?page=user_templates">
+<a href = "index.php?page=final_project">
 <img class="btn" src="images/finalproject.png" alt="[Final Project]" title="Final Project"style = "border:0" /></a><br />
