@@ -4,6 +4,12 @@
 </form>
 
 <?php
+/*
+ * Justin Garrison
+ * MSIT570
+ * Term Project
+ * 2015-01-24
+ */
 //DEBUGGING echo getname();
 $directory = "images";
 $tmp_name = $_FILES["filename"]["tmp_name"];

@@ -1,4 +1,10 @@
 <?php
+/*
+ * Justin Garrison
+ * MSIT570
+ * Term Project
+ * 2015-01-24
+ */
 date_default_timezone_set('America/Los_Angeles');
 $currentyear = date(Y);
 

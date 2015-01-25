@@ -1,4 +1,10 @@
 <?php
+/*
+ * Justin Garrison
+ * MSIT570
+ * Term Project
+ * 2015-01-24
+ */
 $signs = array( 
   "monkey.png" => "monkey",
   "rooster.png" => "rooster",

@@ -9,9 +9,11 @@ td {
 </style>
 
 <?php
-/* Justin Garrison
- * 2015-01-
- * 
+/*
+ * Justin Garrison
+ * MSIT570
+ * Term Project
+ * 2015-01-24
  */
 
 // create zodiac signs array

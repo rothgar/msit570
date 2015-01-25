@@ -6,6 +6,12 @@
 
 <h1>Embedded Words</h1><hr />
 <?php
+/*
+ * Justin Garrison
+ * MSIT570
+ * Term Project
+ * 2015-01-24
+ */
 $Phrases = array(
  "Your Chinese zodiac sign tells a lot about 
  your personality.",

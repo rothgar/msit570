@@ -6,6 +6,12 @@
 
 <h1>Similar Names</h1><hr />
 <?php
+/*
+ * Justin Garrison
+ * MSIT570
+ * Term Project
+ * 2015-01-24
+ */
 $SignNames = array(
  "Rat",
  "Ox",
