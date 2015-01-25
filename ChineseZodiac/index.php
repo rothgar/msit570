@@ -15,6 +15,7 @@
  * Term Project
  * 2015-01-24
  */
+?>
 <div id="wrapper">
   <div id="header">
     <?php include_once(__DIR__.'/include/inc_header.php') ?>
